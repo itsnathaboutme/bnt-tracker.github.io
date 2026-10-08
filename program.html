@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task list | Live Training Operations</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="program" data-nav="tasks">
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html">Live Training Operations</a>
+      <nav class="site-nav" aria-label="Main">
+        <a href="index.html" data-nav="home">Dashboard</a>
+        <a href="budget.html" data-nav="budget">Budget tracker</a>
+        <a href="tasks.html" data-nav="tasks">Task lists</a>
+      </nav>
+    </div>
+  </header>
+  <div id="draft-banner" class="banner" hidden></div>
+
+  <main>
+
+    <section class="page-head" id="program-head">
+      <div class="wrap">
+        <nav class="crumbs" aria-label="Breadcrumb">
+          <a href="index.html">Dashboard</a> / <a href="tasks.html">Task lists</a> / <span id="crumb-code">Program</span>
+        </nav>
+        <h1 id="program-title">Training program</h1>
+        <p class="lead" id="program-meta"></p>
+        <p class="fine" id="program-summary"></p>
+      </div>
+    </section>
+
+    <div class="wrap" id="program-body">
+
+      <section class="section">
+        <h2>Program details</h2>
+        <p class="section-intro">Dates, venue, instructor, budget and status for this training.</p>
+        <div class="toolbar" id="details-toolbar"></div>
+        <div id="details"></div>
+      </section>
+
+      <section class="section">
+        <h2>Task list</h2>
+        <p class="section-intro">Tasks in order, grouped by phase. Tick Done when a task is finished.</p>
+        <div class="toolbar" id="tasks-toolbar"></div>
+        <div id="tasks"></div>
+      </section>
+
+    </div>
+
+    <div class="wrap" id="not-found" hidden>
+      <section class="section">
+        <h2>Program not found</h2>
+        <p class="section-intro">Check the link, or go back to the <a href="tasks.html">task lists</a>.</p>
+      </section>
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">Prepared by Nathaniel Caramelo &middot; Source: Budget &amp; ILT Tracker 2024</div>
+  </footer>
+
+  <script src="data/site-data.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/pages.js"></script>
+</body>
+</html>

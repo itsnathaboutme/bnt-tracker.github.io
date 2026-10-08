@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | Live Training Operations</title>
+  <meta name="description" content="Budget, schedule and delivery status for instructor-led cybersecurity training.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="home" data-nav="home">
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html">Live Training Operations</a>
+      <nav class="site-nav" aria-label="Main">
+        <a href="index.html" data-nav="home">Dashboard</a>
+        <a href="budget.html" data-nav="budget">Budget tracker</a>
+        <a href="tasks.html" data-nav="tasks">Task lists</a>
+      </nav>
+    </div>
+  </header>
+  <div id="draft-banner" class="banner" hidden></div>
+
+  <main>
+
+    <section class="hero">
+      <div class="wrap">
+        <h1>Dashboard</h1>
+        <p class="lead" id="site-subtitle"></p>
+
+        <div id="kpis"></div>
+
+        <p class="link-row">
+          <a href="dashboard.html">Open the full dashboard to view and edit</a>
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <h2>Training programs</h2>
+        <p class="section-intro">Select a program name to open its task list.</p>
+
+        <div id="home-table"></div>
+
+        <details class="accordion" id="budget-accordion">
+          <summary>Budget Tracker</summary>
+          <div class="accordion-body">
+            <div class="utilization" id="home-util"></div>
+            <div id="home-budget"></div>
+            <p class="link-row">
+              <a href="budget.html">Open the full Budget Tracker to view and edit</a>
+            </p>
+          </div>
+        </details>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap" id="footer">Prepared by Nathaniel Caramelo &middot; Source: Budget &amp; ILT Tracker 2024</div>
+  </footer>
+
+  <script src="data/site-data.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/pages.js"></script>
+</body>
+</html>
